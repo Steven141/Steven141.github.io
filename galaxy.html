@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Galaxy Collision Simulation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/galaxy.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Steven Brown</a> 
+							<a href="mailto:steven.brown1620@gmail.com" class="icon solid fa-envelope"><span class="label">Mail</span></a>
+							<a href="https://www.linkedin.com/in/steven-brown-15aa471b6/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a>
+							<a href="https://github.com/Steven141" class="icon brands fa-github"><span class="label">Github</span></a>
+						</h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<!-- <li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#">Log In</a></li>
+							<li><a href="#">Sign Up</a></li> -->
+							<li><a href="index.html#three">About</a></li>
+							<li><a href="index.html#four">Portfolio</a></li>
+							<li><a href="#footer">Contact</a></li>
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Galaxy Collision Simulation</h2>
+								<p>For more details check out the links below</p>
+								<a href="https://github.com/Steven141/GalaxySim" class="special">Code</a>
+								<a href="Documents/StevenBrown_Project1_Report.pdf" class="special">Report</a>
+								<a href="Documents/no_lost_stars2.mp4" class="special">Stars Re-orbit Video</a>
+								<a href="Documents/unravel2.mp4" class="special">Stars Unravel Video</a>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Project Overview</h3>
+									<p>In this project the goal was to implement a very simplified model of galaxy collisions, motivated by work due
+										to Alar and Juri Toomre in the early 1970’s. This model is grossly inadequate for the detailed simulation
+										of galaxy interactions but nevertheless capable of reproducing some basic morphological features that are
+										observed in actual galactic collisions.
+
+
+										The model that will be studied in this project will be the Toomre Model. In the Toomre model, an isolated
+										galaxy is modeled as a central particle (core particle) that has some gravitating mass, mc. Orbiting this core
+										is some number, ns, of stars each with circular orbits of varying radii. The stars have vanishing gravitating
+										mass which means they experience an acceleration due to the core’s gravitational influence, but do not
+										contribute to the gravitational field themselves. Therefore, the core acts on each of the stars, but the stars
+										do not exert gravitational forces on either the core or the other stars.
+										
+									</p>
+
+									<p>To model a two galaxy collision we consider two cores (masses mc1 and mc2) surrounded by ns1 and ns2
+										particles. The galaxies start with initial positions that ensure that the interaction of core 1 with the stars
+										from galaxy 2 and vice versa is negligible. The galaxies will approach and interact in some fashion with one
+										another. All of the stars feel the gravitational influence of both cores, and each core feels the gravitational
+										influence of the other core. Therefore, any given particle will experience a gravitational force from either
+										one or two core particles. This results in interesting galaxy collisions heavely dependent on initial conditions.
+									</p>
+
+									<video style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5%; width: 800px; ;height:800;" autoplay loop>
+                                        <source src="Documents/no_lost_stars2.MP4" type="video/mp4">
+									</video>
+
+									<!-- <h3 class="major">Vitae phasellus</h3>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p> -->
+									<a href="index.html#four" class="special">Back to Portfolio</a>
+
+									<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Contact</h2>
+						<!-- <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p> -->
+						<!-- <form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form> -->
+						<ul class="contact">
+							<!-- <li class="icon solid fa-home">
+								Untitled Inc<br />
+								1234 Somewhere Road Suite #2894<br />
+								Nashville, TN 00000-0000
+							</li> -->
+							<!-- <li class="icon solid fa-phone">(000) 000-0000</li> -->
+							<li class="icon solid fa-envelope"><a href="mailto:steven.brown1620@gmail.com">steven.brown1620@gmail.com</a></li>
+							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
+							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li> -->
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/steven-brown-15aa471b6/">Linkedin</a></li>
+							<li class="icon brands fa-github"><a href="https://github.com/Steven141">Github</a></li>								
+						</ul>
+						
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
