@@ -47,11 +47,11 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Machine Learning Car Simulation</h2>
+								<h2>Chess Engine</h2>
 								<p>For more details check out the links below</p>
-								<a href="https://github.com/moolanp/ENPH353" class="special">Code</a>
-								<a href="Documents/ENPH353 Final Report.pdf" class="special">Report</a>
-								<a href="Documents/ENPH353RUN.MP4" class="special">Video</a>
+								<a href="https://github.com/Steven141/ChessProject" class="special">Code</a>
+								<!-- <a href="Documents/ENPH353 Final Report.pdf" class="special">Report</a>
+								<a href="Documents/ENPH353RUN.MP4" class="special">Video</a> -->
 							</div>
 						</header>
 
@@ -60,25 +60,35 @@
 								<div class="inner">
 
 									<h3 class="major">Project Overview</h3>
-									<p>The objective of this project was to develope an autonomous car that drives through the 
-										simulated environment while obeying traffic laws and returns license plates and associated 
-										parking IDs using machine learning and computer vision. 
-
-										Linux based ROS Melodic/Gazebo was used as a simulation ground for the robot to navigate through. 
-										Google Colab was used to access python libraries such as OpenCV for computer vision 
-										and Tensorflow to design and train neural networks.
+									<p>The objective of this project was to develop a chess game where a player could play against another player 
+										or play against a homemade engine. This is still a work in progress but so far three versions have been made.
+										All versions have a similar python frontend but vary with different chess engine architectures for the backend.
+									</p>
+									<p>
+										The first version used python for the engine and represented the game state as a 2 dimensional array. This representation led
+										to the development of a greedy and advanced approach for move generation. This was great for player vs player games but when it 
+										came time to develop the best move finder which looks many moves ahead it was way too slow.
+									</p>
+									<p>
+										The second version was more of a quick trial to explore a new engine architecture. The chess board would now be represented 
+										by 12 bitboards (one for each piece). A bitboard is represented by a 64-bit number where each bit corresponds to a square on 
+										the chess board. A '1' represents the square being populated by a specific piece and a '0' represents an empty square. This 
+										allows for fast bitwise opperations during move generation instead of looping over a 2 dimensional array many times. This 
+										engine was developed until successful performance testing but not fully integrated with the frontend. The main goal of this
+										version was to pass performance testing and gather some timing data where this architecture could then be re-written and improved
+										in a faster language and integrated with the frontend to produce a full game.
+									</p>
+									<p>
+										The third version used the same bitboards architecture but was improved and written in Rust. Py03 and Maturin were used to
+										allow python to import and interact with the Rust engine library. PyO3 is a Rust library that provides bindings to the Python interpreter.
+										Maturin is a command-line tool that streamlines the process of building and publishing Rust-based Python packages. 
+										It leverages PyO3 under the hood to create Python wheels (binary distributions). This resulted in a 2100 Elo chess engine that
+										can be played against after downloading the zip file in the github repository. 
 									</p>
 
-									<p>In regards to the competition the key objectives were to develop an autonomous robot which could
-										navigate roads and detect/read license plates on parked vehicles, with obstacles including pedestrian
-										crosswalks and other vehicles to avoid. The measures of success in the competition were plates registered
-										and time taken to complete the course. With 6 points for outer loop plates, 8 points for inner loop plates
-										and a cap of 4 minutes for simulation duration with points taking precedence in the final result.
-									</p>
-
-									<video style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5%; width: 1118px; ;height:978;" autoplay loop>
+									<!-- <video style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5%; width: 1118px; ;height:978;" autoplay loop>
                                         <source src="Documents/ENPH353RUN.MP4" type="video/mp4">
-									</video>
+									</video> -->
 
 									<!-- <h3 class="major">Vitae phasellus</h3>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p> -->
